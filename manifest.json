@@ -3,6 +3,12 @@
 	"version": "0.0.5",
 	"manifest_version": 2,
 	"description": "SF Notifier",
+	"icons": {
+		"16": "./img/icon16.png",
+		"24": "./img/icon24.png",
+		"48": "./img/icon48.png",
+		"128": "./img/icon128.png"
+	},
 	"browser_action": {
 		"default_title": "SF Notification",
 		"default_icon": "favicon.ico",
