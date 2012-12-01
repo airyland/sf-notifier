@@ -16,13 +16,13 @@ chrome.cookies.get(option, function(cookie) {
 					if(xhr.status == 200) {
 						var data = JSON.parse(xhr.responseText.slice(6, -1));
 						chrome.browserAction.setBadgeText({
-							text: data.data + ''
+							text: data.data==0?'':data.data+''
 						});
 					}
 				} else {
-					chrome.browserAction.setBadgeText({
+					/*chrome.browserAction.setBadgeText({
 						text: 'x'
-					});
+					});*/
 				}
 			}
 			xhr.open('GET', 'http://x.segmentfault.com/event/check?sfsess=' + sfsess + '&_=' + new Date(), true);
