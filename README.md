@@ -9,7 +9,7 @@ Screenshot
 
 todo
 ----
-+ 实现在popup上忽略全部消息。
++ <del>实现在popup上忽略全部消息。</del>
 
 
 

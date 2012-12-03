@@ -30,7 +30,7 @@ var simpleRequest = function(url, onsuccess, onnotsignin,onerror) {
 
 var setBadgeText = function(text) {
     chrome.browserAction.setBadgeText({
-        text: text
+        text: text==='0'?'':text
     });
 }
 

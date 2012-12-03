@@ -21,8 +21,16 @@ function() {
 		api = {
 			dump: prefix + 'dump' + end,
 			view: prefix + 'view' + end + '&id=',
-			check: prefix + 'check' + end
+			check: prefix + 'check' + end,
+			viewAll:prefix + 'viewAll' + end
 		};
+
+	var viewAllMessage=function(){
+		simpleRequest(api.viewAll,function(){
+			ul.innerHTML=noMessageBottom;
+			setBadgeText('');
+		});
+	}
 
 	var dumpMessage = function() {
 			simpleRequest(api.dump, function(data) {
@@ -81,7 +89,7 @@ function() {
 
 
 			} else if(target.classList.contains('ignore')) {
-				alert('抱歉，还未支持');
+				viewAllMessage();
 
 			} else {
 				chrome.tabs.create({
