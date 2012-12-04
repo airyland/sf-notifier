@@ -12,7 +12,7 @@ function() {
 		cookie = getCookie(option);
 
 	if(!cookie) {
-		ul.innerHTML = noMessageBottom;
+		ul.innerHTML = notsigninTip;
 		return;
 	}
 
@@ -75,7 +75,7 @@ function() {
 				simpleRequest(api.view + id, function(data) {
 					parent.parentNode.removeChild(parent);
 					//刷新计数数据
-					var data = JSON.parse(data.responseText.slice(6, -1));
+					var data = JSON.parse(data.slice(6, -1));
 					var count = data.data;
 					if(count === 0) {
 						ul.innerHTML = noMessageBottom;
