@@ -1,5 +1,10 @@
+
+
 SegmentFault Notifier
 ---------------------
+
+**Sorry, 该插件已经不再维护更新，请不要使用该插件。**
+
 Chrome【Segmentfault 社区】站内消息提醒扩展 
 
 Screenshot
